@@ -3,11 +3,8 @@
     <!-- Slot for the handle -->
     <ng-content></ng-content>
     <mat-card-title>
-      {{ board.title }}
+      {{ board.title.toUpperCase() }}
     </mat-card-title>
-    <mat-card-subtitle>
-      {{ board.id }}
-    </mat-card-subtitle>
   </mat-card-header>
 
   <div

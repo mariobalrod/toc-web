@@ -3,9 +3,12 @@
     min-width: 300px;
     max-width: 300px;
     padding: 10px;
-    background: #212121;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 17px rgba(0, 0, 0, 0.09);
+    border-radius: 6px;
+    position: relative;
   }
-  
+
   .inner-card {
       margin: 5px 0;
       cursor: pointer;
@@ -14,7 +17,7 @@
   .cdk-drag-animating {
     transition: transform 300ms ease;
   }
-  
+
   .tasks.cdk-drop-list-dragging .cdk-drag {
     transition: transform 300ms ease;
   }
@@ -23,10 +26,10 @@
   opacity: 0.5;
 }
 
-.blue { background: #71deff; color: black; }
-.green { background: #36e9b6; color: black;  }
-.yellow { background: #ffcf44; color: black; }
-.purple { background: #b15cff; }
-.red { background: #e74a4a; }
+.blue { background: #71deff; color: white; }
+.green { background: #36e9b6; color: white;  }
+.yellow { background: #ffcf44; color: white; }
+.purple { background: #b15cff; color: white; }
+.red { background: #e74a4a; color: white; }
 
-.gray { background: gray; text-decoration: line-through; }
+.gray { background: gray; text-decoration: line-through; opacity: 0.5; }
