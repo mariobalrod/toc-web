@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="false">
+    <mat-toolbar>ToC</mat-toolbar>
+    <mat-nav-list>
+
+      <a mat-list-item routerLink="/" (click)="drawer.close()">Home</a>
+      <a mat-list-item routerLink="/kanban" (click)="drawer.close()">Tablero</a>
+      <a mat-list-item routerLink="/login" *ngIf="!(afAuth.authState | async)">Login</a>
+      <a mat-list-item routerLink="/login" *ngIf="afAuth.authState | async as user">
+        Profile
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar style="background-color: #3D3D3D; color: white;">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+
+
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="logo" routerLink="/" style="margin-left: 10px;">ToC</span>
+
+      <span class="fill-space"></span>
+      <div *ngIf="!(isHandset$ | async)">
+        <a mat-button routerLink="/kanban">Tablero</a>
+
+        <a mat-button routerLink="/login" *ngIf="!(afAuth.authState | async)">Login</a>
+        <a mat-button routerLink="/login" *ngIf="afAuth.authState | async as user">
+          <img class="avatar" [src]="user.photoURL || 'assets/default-user.svg'">
+          Profile
+        </a>
+
+      </div>
+    </mat-toolbar>
+
+    <ng-content></ng-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
