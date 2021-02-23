@@ -4,7 +4,13 @@ mat-card {
     width: 100%;
     margin: 0 auto;
   }
-  
+
+  @media (max-width: 700px) {
+    mat-card {
+      width: 300px;
+    }
+  }
+
 mat-form-field {
       width: 100%;
       margin-bottom: 16px;
@@ -15,8 +21,8 @@ mat-form-field {
 }
 
 
-input {    
-    height: 2em;              
+input {
+    height: 2em;
     div.mat-form-field-infix {
       padding: .3em 0;
       input.mat-input-element {

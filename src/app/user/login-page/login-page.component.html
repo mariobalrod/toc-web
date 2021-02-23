@@ -12,6 +12,7 @@
   </div>
 
   <div *ngIf="afAuth.authState | async as user" class="logout">
+    <img style="width: 200px; border-radius: 50%;" class="avatar" [src]="user.photoURL || 'assets/default-user.svg'">
     <p>
       Logged in as <strong>{{ user.email }}</strong>
     </p>

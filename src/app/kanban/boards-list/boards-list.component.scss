@@ -1,3 +1,14 @@
+.image_empty {
+  margin-top: 20px;
+  width: 600px;
+}
+
+@media (max-width: 700px) {
+  .image_empty {
+    width: 300px;
+  }
+}
+
 .boards {
   width: auto;
   padding: 24px;

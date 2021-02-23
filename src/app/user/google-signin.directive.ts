@@ -6,7 +6,7 @@ import * as firebase from 'firebase/app';
   selector: '[appGoogleSignin]'
 })
 export class GoogleSigninDirective {
-  constructor(private afAuth: AngularFireAuth) {}
+  constructor(private afAuth: AngularFireAuth,) {}
 
   @HostListener('click')
   onclick() {

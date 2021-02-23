@@ -1,10 +1,17 @@
 <div class="board-button">
-  <button mat-raised-button color="accent" cdkDragDisabled (click)="openBoardDialog()">
+  <button mat-raised-button cdkDragDisabled (click)="openBoardDialog()">
     New Board
   </button>
 </div>
 
-<div cdkDropList cdkDropListOrientation="horizontal" class="boards" (cdkDropListDropped)="drop($event)">
+<div *ngIf="boards.length === 0"
+  style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+  <h3 style="max-width: 300px; text-align: center; margin: 20px auto;">You haven't got any board or task. Create one!
+  </h3>
+  <img class="image_empty" src="/assets/empty.svg" alt="empty">
+</div>
+
+<div cdkDropList cdkDropListOrientation="horizontal" *ngIf="boards.length !== 0" class="boards" (cdkDropListDropped)="drop($event)">
   <app-board cdkDrag *ngFor="let board of boards" [board]="board">
     <mat-icon cdkDragHandle class="handle">drag_indicator</mat-icon>
   </app-board>
