@@ -3,6 +3,7 @@ export const environment = {
   firebase: {
     apiKey: "AIzaSyAN_w-nyKS6CJtTtO69QGHVaXWvZdpr2Jg",
     authDomain: "toc-web-b1110.firebaseapp.com",
+    databaseURL: "https://toc-web-b1110-default-rtdb.firebaseio.com",
     projectId: "toc-web-b1110",
     storageBucket: "toc-web-b1110.appspot.com",
     messagingSenderId: "324349253705",
