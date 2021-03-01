@@ -15,11 +15,7 @@ const fs = require('fs-extra');
 
 // Must manually define routes to prerender
 const ROUTES = [
-    '/', 
-    '/customers',
-    '/customers/78asJMXvM8q7f87cpVEF',
-    '/customers/Wu2BRnrAxnizSgGaJXhN',
-    '/customers/qe7EtWu4UWiWfZgtmP3C',
+    '/',
     '/kanban',
     '/login',
 ];
@@ -54,5 +50,4 @@ const {
   }
 
   process.exit();
-  console.log('prerendering complete');
 })();
